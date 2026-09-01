@@ -4,13 +4,13 @@ This repository contains a hands-on data analytics project focused on e-commerce
 
 ---
 
-## 📌 Project Summary
+##  Project Summary
 
 The main goal of this analysis is to convert raw customer transaction data into strategic business decisions. The project covers data cleaning, RFM-style custom scoring, churn risk identification for VIP customers, behavioral deep-dives (discount behavior, channel usage, and payment preferences), and ends with an executive decision dashboard.
 
 ---
 
-## 💡 Key Analysis Steps
+##  Key Analysis Steps
 
 1. **Data Cleaning & AOV Metrics:** Cleaned missing values, standardized numeric features, and computed metrics such as Average Order Value (AOV = Spending / Orders).
 2. **Multi-Criteria Scoring:** Created a normalized composite value score based on total spending, transaction frequency, and satisfaction scores to classify customers into Low, Medium, and High Value tiers.
@@ -22,7 +22,7 @@ The main goal of this analysis is to convert raw customer transaction data into 
 
 ---
 
-## 📊 Executive Dashboard & Recommendations
+##  Executive Dashboard & Recommendations
 
 The final notebook section generates a 3-chart dashboard alongside 6 core metrics:
 
@@ -39,6 +39,5 @@ The final notebook section generates a 3-chart dashboard alongside 6 core metric
 ---
 
 
-│   └── customer_analytics.ipynb
 ├── executive_dashboard.png
 └── README.md
