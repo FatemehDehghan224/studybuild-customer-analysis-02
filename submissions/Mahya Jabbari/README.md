@@ -47,6 +47,7 @@ The main data quality checks included:
 - Standardizing gender information using the available reference data
 - Validating the final dataset structure and column types
 
+The detailed data-cleaning process, including the identified issues, decisions made, and resulting changes to the dataset, is documented in [data-cleaning project](https://github.com/StudyBuildCommunity/studybuild-data-cleaning-01/tree/main/submissions/Mahya-Jabbari).
 The cleaned dataset was then used consistently across all six business questions.
 
 ---
@@ -59,7 +60,7 @@ The first analysis identifies the main characteristics of the store's current cu
 
 The largest age group is 55-64, representing 16 customers (26.67%). Male customers represent 35 customers (58.33%). Gold is the most common membership tier with 19 customers (31.67%). Android is the most commonly used device with 22 customers (36.67%), while Online Wallet is the most common payment method with 23 customers (38.33%).
 
-Based on these dimensions, the dominant customer profile is a male customer aged 55-64, with Gold membership, using an Android device and Online Wallet as the payment method.
+Based on these observed characteristics, the dominant customer characteristics in this dataset, considered individually, are male gender, age 55-64, Gold membership, Android device usage, and Online Wallet as the payment method.
 
 However, this dominant profile is based on customer distribution rather than financial value. Therefore, it should not automatically become the sole target of future campaigns. Smaller customer segments may generate higher financial value or show stronger loyalty and should also be evaluated.
 
@@ -89,16 +90,14 @@ The loyalty analysis identifies the 10 customers who should receive priority whe
 
 Customers were ranked using a composite loyalty score based on four dimensions:
 
-- Total Spending: 35%
-- Purchase Frequency: 30%
-- Recency: 20%
-- Satisfaction: 15%
+* Total Spending: 35%
+* Purchase Frequency: 30%
+* Recency: 20%
+* Satisfaction: 15%
 
-The weights were selected based on the business objective of prioritizing financially valuable and frequently purchasing customers, while also considering recent activity and satisfaction.
+The weighting scheme was designed based on the business objective of prioritizing financially valuable and frequently purchasing customers, while also considering recent activity and satisfaction. Total spending received the highest weight because financial value is the primary consideration when allocating a limited number of loyalty benefits. Purchase frequency represents repeated engagement, while recency prevents highly inactive customers from being prioritized solely because of historical value. Satisfaction provides an additional indicator of customer relationship quality.
 
-The weighting scheme is an analytical decision for this project and is not a statistically validated prediction model.
-
-Total spending received the highest weight because financial value is the primary consideration when allocating a limited number of loyalty benefits. Purchase frequency represents repeated engagement, recency prevents highly inactive customers from being prioritized solely because of historical value, and satisfaction provides an additional indicator of customer relationship quality.
+A sensitivity analysis was performed to assess whether the Top 10 ranking was sensitive to moderate changes in the selected weights. The Top 10 customers remained unchanged in three of the four alternative scenarios, while 9 out of 10 customers remained in the Top 10 under the fourth scenario. This indicates that the customer ranking is relatively robust to moderate changes in the weighting scheme.
 
 The top 10 customers were selected using the calculated loyalty score rather than membership tier alone.
 
@@ -110,7 +109,7 @@ For example, Mina is a Gold member with the highest spending among the selected 
 
 The loyalty program should therefore prioritize observed customer behavior rather than membership tier alone.
 
-The weighting scheme used in this project is an analytical decision for customer prioritization and is not a statistically validated prediction of future loyalty.
+The weighting scheme is an analytical decision for customer prioritization and should not be interpreted as a statistically validated prediction model of future loyalty.
 
 ---
 
@@ -164,7 +163,7 @@ Among payment methods, Card users had the highest average total spending at 3,92
 
 These findings are descriptive and should not be interpreted as evidence of causal relationships. In particular, the analysis does not prove that using a discount causes spending, purchase frequency, satisfaction, or returns to increase or decrease.
 
-In addition, `returned_items` represents only the number of returned items. Because the total number of purchased items is unavailable, an actual return rate cannot be calculated.
+In addition, `returned_items` represents the number of returned items rather than a return rate. Since the total number of purchased items is unavailable, the actual return rate cannot be calculated from this dataset.
 
 ---
 
@@ -217,7 +216,7 @@ Evidence: Discount users show lower average spending but higher average satisfac
 
 Action: Use customer segmentation to target discounts selectively instead of applying them broadly.
 
-KPI: Average customer spending and return rate among targeted customers.
+KPI: Average customer spending and average returned items per customer among targeted customers.
 
 ---
 
