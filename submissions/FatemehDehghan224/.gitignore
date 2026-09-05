@@ -1,0 +1,11 @@
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.codex_deps/
+.matplotlib_cache/
+.pytest_cache/
+anaconda_projects/
+~$*.xlsx
+.DS_Store
+Thumbs.db
